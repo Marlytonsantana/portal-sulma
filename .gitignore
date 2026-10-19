@@ -1,0 +1,11 @@
+﻿*.psd
+*.7z
+*.tgz
+media/outbound/photoshop/
+outbox/
+tmp/
+node_modules/
+.next/
+dist/
+.env
+*.log

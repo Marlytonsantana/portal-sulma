@@ -1,0 +1,118 @@
+{
+  "delivery_version": "SKY-VISUAL-2026-10-18-FINAL",
+  "visual_approval_at": "2026-10-18T23:07:20-03:00",
+  "approval_scope": "Visual design in conversation; technical integration pending",
+  "entry_document": "HANDOFF-GYN.md",
+  "generated_dist_included": false,
+  "checksums": "SHA-256 of every archive member except this manifest itself",
+  "files": {
+    ".github/workflows/deploy.yml": {
+      "bytes": 1885,
+      "sha256": "b9ae934eba7172ffc19a84d20d6279fe2ab23b2efbd9180d11169724c5e09d8a"
+    },
+    "EDITORIAL-WORKFLOW.md": {
+      "bytes": 2100,
+      "sha256": "56748f717095cde889d0af06abed9cf44167ae5449893bb7a5cd1729e9d79964"
+    },
+    "HANDOFF-GYN.md": {
+      "bytes": 12186,
+      "sha256": "4b65ed7c85c61266e03a8fc0799fbff33df678d946379c8b15a677377cf773e2"
+    },
+    "README.md": {
+      "bytes": 3216,
+      "sha256": "9c2658b657393fe938f93026b9fb9e393b58b41813495cefde604caa6f16fe72"
+    },
+    "REFERENCES.md": {
+      "bytes": 1621,
+      "sha256": "2d1be9f5dc809cf16a83256e6fee021c0285393699d008b1103e72aa9265cb36"
+    },
+    "SOURCE-CAVEATS.md": {
+      "bytes": 2061,
+      "sha256": "ca46e791053e85ab483bc928e4872fa479e45632489964b0d9704b3c630f43b0"
+    },
+    "ajustes-html.patch": {
+      "bytes": 33132,
+      "sha256": "8bdfc125178f2d0141386deb52855caa35976c99be8b278e7a8c44dc3d630ee3"
+    },
+    "app.js": {
+      "bytes": 7951,
+      "sha256": "87c1d15e0705d1b5b85e3339b68a548c40a5a50c36fde1f9189d2ffa6c976270"
+    },
+    "assets/fonts/AlfaSlabOne-OFL.txt": {
+      "bytes": 4523,
+      "sha256": "e315abc82a78710c7242e2f2e6529651fd631d4d50e6ad98ea194f9b54c3d701"
+    },
+    "assets/fonts/Inter-OFL.txt": {
+      "bytes": 4377,
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+    },
+    "assets/fonts/RobotoSlab-LICENSE.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "assets/fonts/alfa-slab-one-400.ttf": {
+      "bytes": 91272,
+      "sha256": "0e834ddadca6dc95b5502c01f8911b7a77f50a350ac7400a6e2d9a3bfb1cd02f"
+    },
+    "assets/fonts/inter-400.ttf": {
+      "bytes": 324820,
+      "sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba"
+    },
+    "assets/fonts/inter-500.ttf": {
+      "bytes": 325304,
+      "sha256": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63"
+    },
+    "assets/fonts/inter-600.ttf": {
+      "bytes": 326048,
+      "sha256": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7"
+    },
+    "assets/fonts/inter-700.ttf": {
+      "bytes": 326468,
+      "sha256": "b37284b5701b6b168dfc770aa1a4ac492106422fd3ba76bc7641e37434e8019c"
+    },
+    "assets/fonts/inter-800.ttf": {
+      "bytes": 327324,
+      "sha256": "eec66af7f2337bd34fe6e801cf92ededcb57a20c0d7bc40a61d4eefcbe3dd40c"
+    },
+    "assets/fonts/roboto-slab-variable.ttf": {
+      "bytes": 251880,
+      "sha256": "786ae192477447d33c6672c3055fba7cbfe45184c9a79e77a14f15716ca05b16"
+    },
+    "assets/portal-sulma-logo-sanitized.svg": {
+      "bytes": 1506,
+      "sha256": "ba8873192f4c7eb1ad6146143b4d31f97248b19d72ea38d4a695fa3558d72f2c"
+    },
+    "content.js": {
+      "bytes": 7174,
+      "sha256": "e9372aeabc2f27a9156d218530e62d3771968a72ff2c227963392278e6c92aca"
+    },
+    "data/posts.json": {
+      "bytes": 12845,
+      "sha256": "acd6b13cab423983b44003ba4892ec3c9cb21099bcf311485415a30c85b7042b"
+    },
+    "docs/README-ORIGINAL.md": {
+      "bytes": 3756,
+      "sha256": "397bd5565e6702e5ac3e35a7bd9f26171aa8190fcb09da242241926c25a8a5c1"
+    },
+    "index.html": {
+      "bytes": 6609,
+      "sha256": "809c0f58042a8d01412994405d4e4961fa143e13addabc4e3f3c0eed0855daa6"
+    },
+    "scripts/generate-site.js": {
+      "bytes": 18638,
+      "sha256": "2006c8b573efc824138f8bc3c6f60769d979d56fdf010fe6c142366a37ce970d"
+    },
+    "styles.css": {
+      "bytes": 28856,
+      "sha256": "8bd3f4cba25bf67fc82f7779b4cdbd88d39d0ae541c30bcff3ecfdd4bc7de706"
+    },
+    "validation-report.json": {
+      "bytes": 1613,
+      "sha256": "731d4e2e0ecdb23d39617a3d6e2e8e1538ed2567b63f5faf4b3325d26db9bda8"
+    },
+    "verify.py": {
+      "bytes": 1812,
+      "sha256": "ef65de76ab87dec7cf0382c34e0cfde2055bb23625bf14da93698a6df8de8cc6"
+    }
+  }
+}

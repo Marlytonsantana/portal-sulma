@@ -1,0 +1,40 @@
+{
+  "changed_existing_files": [
+    "index.html",
+    "styles.css",
+    "scripts/generate-site.js",
+    "README.md"
+  ],
+  "css_parse_errors": [],
+  "font_assets_present": true,
+  "font_asset_count": 7,
+  "index_semantic_hooks_unchanged": true,
+  "build_copies_css_exactly": true,
+  "inline_css_removed_from_root_and_generated_home": true,
+  "browser_visual_qa": "Not performed: control-browser skill unavailable in managed runtime.",
+  "app_js": "Pre-existing syntax error at line 14, retained per supplied protocol.",
+  "verify_py": "Pre-existing failure due to external CDN dependencies; retained.",
+  "contrast_revision": "Numerical color-pair checks passed; user approved the conversation preview; integrated browser QA pending.",
+  "contrast_ratios": {
+    "light_title": 17.08,
+    "light_secondary": 8.08,
+    "light_red": 6.64,
+    "light_blue": 5.54,
+    "light_status": 7.4,
+    "dark_title": 15.72,
+    "dark_secondary": 9.37,
+    "dark_red": 7.95,
+    "dark_blue": 8.45,
+    "radar_title": 15.68
+  },
+  "css_motion": "Native CSS entrance, stagger, layout change, details, hover, scroll reveal where supported; reduced-motion honored.",
+  "headline_font": "Roboto Slab variable 100–900; titles at 700",
+  "headline_font_license": "Apache-2.0; included in assets/fonts",
+  "delivery_version": "SKY-VISUAL-2026-10-18-FINAL",
+  "visual_approval": {
+    "status": "approved_by_user",
+    "approved_at": "2026-10-18T23:07:20-03:00",
+    "scope": "Visual preview in conversation, including Roboto Slab headlines",
+    "quote": "perfeito aprovado, finaliza a documentação para eu enviar para a Gyn"
+  }
+}

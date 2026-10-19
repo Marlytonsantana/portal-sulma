@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prévia editorial dinâmica do Portal Sul MA com pautas em rascunho, sem autorização de publicação.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#0865d1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0c1929" media="(prefers-color-scheme: dark)">
+  <title>Portal Sul MA — Prévia editorial dinâmica</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="preload" as="style" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
+  <script src="content.js" defer></script>
+  <script src="app.js" defer></script>
+  <!-- Motion One para animações leves (WAAPI nativa, 3.5kb) -->
+  <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.min.js" defer></script>
+  <!-- Web Vitals para monitoramento de performance -->
+  <script src="https://cdn.jsdelivr.net/npm/web-vitals@latest/dist/web-vitals.attribution.iife.js" defer></script>
+</head>
+<body data-layout="pulse">
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <div class="status-ribbon" role="note"><strong>Prévia editorial dinâmica</strong><span>4 pautas/rascunhos · publicação não autorizada</span></div>
+
+  <header class="site-header">
+    <div class="masthead shell">
+      <a class="brand" href="#topo" aria-label="Portal Sul MA — início"><img src="assets/portal-sulma-logo-sanitized.svg" alt="Portal Sul MA"></a>
+      <p class="edition-kicker">Sul do Maranhão<br><strong>Edição de trabalho · 12 OUT 2026</strong></p>
+      <button class="compact-button theme-toggle" type="button" aria-pressed="false"><span aria-hidden="true">◐</span><span data-theme-label>Tema escuro</span></button>
+    </div>
+    <nav class="section-nav" aria-label="Navegação principal">
+      <div class="shell nav-scroll"><a href="#topo">Capa</a><a href="#pautas">Pautas</a><a href="#radar">Radar</a><a href="#metodo">Método</a><a href="EDITORIAL-WORKFLOW.md">Fluxo editorial</a></div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero shell" id="topo" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Portal Sul MA / mesa de edição</p>
+        <h1 id="hero-title">Informação local,<br><em>antes de publicar.</em></h1>
+        <p>Uma capa experimental para organizar apuração, lacunas e impacto regional. Nada nesta página é notícia publicada.</p>
+      </div>
+      <div class="hero-signal" aria-hidden="true"><span>04</span><b>PAUTAS</b><i></i></div>
+    </section>
+
+    <section class="control-deck" aria-labelledby="view-title">
+      <div class="shell controls-grid">
+        <div>
+          <p class="control-label" id="view-title">Composição da capa</p>
+          <div class="layout-switcher" role="group" aria-labelledby="view-title">
+            <button type="button" data-layout-choice="pulse" aria-pressed="true"><span>01</span> Pulse</button>
+            <button type="button" data-layout-choice="ledger" aria-pressed="false"><span>02</span> Ledger</button>
+            <button type="button" data-layout-choice="horizon" aria-pressed="false"><span>03</span> Horizon</button>
+          </div>
+        </div>
+        <div class="search-panel">
+          <label for="search">Buscar nas pautas</label>
+          <input id="search" type="search" placeholder="Balsas, gasolina, chuva…" autocomplete="off">
+        </div>
+        <div class="filter-panel" aria-labelledby="filter-label">
+          <p class="control-label" id="filter-label">Filtrar mesa</p>
+          <div class="filters" role="group" aria-labelledby="filter-label">
+            <button type="button" data-filter="all" aria-pressed="true">Todas</button>
+            <button type="button" data-filter="confirmed" aria-pressed="false">Confirmadas</button>
+            <button type="button" data-filter="pending" aria-pressed="false">Com pendências</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stories shell" id="pautas" aria-labelledby="stories-title">
+      <div class="section-heading"><div><p class="eyebrow">Mesa regional</p><h2 id="stories-title">Pautas em trabalho</h2></div><p id="result-count" role="status" aria-live="polite">4 pautas exibidas</p></div>
+      <div class="story-grid" data-story-grid></div>
+      <noscript><p class="noscript">Ative o JavaScript para renderizar as quatro pautas e os controles desta prévia.</p></noscript>
+    </section>
+
+    <section class="radar" id="radar" aria-labelledby="radar-title">
+      <div class="shell">
+        <div class="section-heading inverse"><div><p class="eyebrow">Leitura horizontal</p><h2 id="radar-title">Radar de verificação</h2></div><div class="carousel-controls"><button type="button" data-carousel-prev aria-label="Voltar um cartão">←</button><button type="button" data-carousel-next aria-label="Avançar um cartão">→</button></div></div>
+        <div class="carousel" data-carousel tabindex="0" role="region" aria-roledescription="carrossel" aria-label="Pendências das pautas"></div>
+        <p class="carousel-help">Use as setas do teclado ou os botões para navegar.</p>
+      </div>
+    </section>
+
+    <section class="method shell" id="metodo" aria-labelledby="method-title">
+      <div><p class="eyebrow">Nota de método</p><h2 id="method-title">Clareza antes da velocidade.</h2></div>
+      <div class="method-copy"><p>Os quatro itens vieram de uma remessa aprovada somente para redação de rascunho. Fontes, estados de acesso e lacunas foram mantidos visíveis.</p><p><strong>WordPress continua sendo o CMS.</strong> Esta interface não agenda, publica ou altera conteúdo. Qualquer avanço exige verificação e aprovação humana explícita.</p><a class="text-link" href="SOURCE-CAVEATS.md">Ler caveats editoriais →</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-grid"><img src="assets/portal-sulma-logo-sanitized.svg" alt="Portal Sul MA"><p>Prévia local, sem dependências externas, imagens ou autorização de publicação.</p><a href="#topo">Voltar ao topo ↑</a></div></footer>
+  <template id="empty-template"><div class="empty-state"><strong>Nenhuma pauta encontrada.</strong><span>Ajuste a busca ou o filtro.</span></div></template>
+</body>
+</html>
