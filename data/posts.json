@@ -7,6 +7,10 @@
     "description": "Portal de notícias do Sul do Maranhão",
     "language": "pt-BR",
     "logo": "assets/portal-sulma-logo-sanitized.svg",
+    "contact": {
+      "email": "",
+      "whatsapp": ""
+    },
     "social": {
       "instagram": "https://www.instagram.com/portalsulma/",
       "facebook": "https://facebook.com/portalsulma"
