@@ -1,0 +1,50 @@
+{
+  "version": "1.0",
+  "disclosure": "Perfil editorial assistido por IA, sob supervisão humana do Portal Sul MA.",
+  "instructions": "docs/PERSONAS-EDITORIAIS.md",
+  "defaultReviewer": "helena-duarte",
+  "personas": [
+    {
+      "id": "rafael-nogueira",
+      "name": "Rafael Nogueira",
+      "role": "author",
+      "section": "Política regional",
+      "preferredWords": [
+        160,
+        260
+      ]
+    },
+    {
+      "id": "marina-azevedo",
+      "name": "Marina Azevedo",
+      "role": "author",
+      "section": "Economia & agro",
+      "preferredWords": [
+        140,
+        240
+      ]
+    },
+    {
+      "id": "clara-reis",
+      "name": "Clara Reis",
+      "role": "author",
+      "section": "Sociedade",
+      "preferredWords": [
+        250,
+        450
+      ]
+    },
+    {
+      "id": "helena-duarte",
+      "name": "Helena Duarte",
+      "role": "reviewer-and-explainers",
+      "section": null,
+      "preferredWords": [
+        300,
+        500
+      ]
+    }
+  ],
+  "fictionalExamplesArePublishable": false,
+  "autonomousPublication": false
+}

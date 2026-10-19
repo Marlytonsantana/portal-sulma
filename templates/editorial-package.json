@@ -1,0 +1,110 @@
+{
+  "templateOnly": true,
+  "schemaVersion": "1.0",
+  "scope": "site-only",
+  "slug": "",
+  "version": 1,
+  "state": "DRAFT",
+  "sitePost": {
+    "id": "",
+    "slug": "",
+    "section": "",
+    "tone": "blue",
+    "title": "",
+    "excerpt": "",
+    "content": "",
+    "image": "",
+    "category": "",
+    "tags": [],
+    "date": "",
+    "factDate": "",
+    "sourceDate": "",
+    "author": "",
+    "reviewer": "",
+    "checking": "NAO_CONFIRMADA",
+    "editorialStatus": "RASCUNHO_PARA_APROVACAO",
+    "recommendation": "APURAR",
+    "publicationAuthorized": false,
+    "relevance": "",
+    "reporting": "",
+    "pending": "",
+    "caveat": "",
+    "sources": [],
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle"
+    }
+  },
+  "image": {
+    "originDecisionByTom": "",
+    "assetReference": "",
+    "filename": "",
+    "promptIfMissing": "",
+    "credit": "",
+    "licenseEvidenceReference": "",
+    "isIllustrative": false,
+    "requirements": {
+      "format": "WEBP",
+      "width": 1200,
+      "height": 630,
+      "maxBytes": 150000
+    },
+    "actual": {
+      "format": null,
+      "width": null,
+      "height": null,
+      "bytes": null
+    },
+    "sha256": ""
+  },
+  "artifactReferences": {
+    "siteJson": "",
+    "readableText": "",
+    "heroWebp": "",
+    "manifest": ""
+  },
+  "hashes": {
+    "siteJson": "",
+    "readableText": "",
+    "heroWebp": ""
+  },
+  "approvals": {
+    "selection": {
+      "by": "",
+      "at": "",
+      "evidenceReference": ""
+    },
+    "editorial": {
+      "by": "",
+      "at": "",
+      "evidenceReference": "",
+      "approvedVersion": null,
+      "siteJsonSha256": ""
+    },
+    "image": {
+      "by": "",
+      "at": "",
+      "evidenceReference": "",
+      "heroWebpSha256": ""
+    },
+    "publication": {
+      "by": "",
+      "at": "",
+      "evidenceReference": "",
+      "authorized": false
+    }
+  },
+  "delivery": {
+    "recipient": "contato@portalsulma.com",
+    "subject": "",
+    "deduplicationKey": "",
+    "sentAt": null,
+    "providerReceipt": null,
+    "sentFolderMessageReference": null,
+    "reservation": null
+  },
+  "social": {
+    "enabledInThisPhase": false,
+    "futureDefault": "post-unico"
+  }
+}
