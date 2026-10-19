@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-10-18T03:30:00-03:00",
+  "lastUpdated": "2026-10-19T19:40:00-03:00",
   "site": {
     "name": "Portal Sul MA",
     "url": "https://portalsulma.com",
@@ -14,215 +14,93 @@
   },
   "posts": [
     {
-      "id": "RADAR-MA-2026-10-12-01",
-      "slug": "hospital-balsas",
-      "section": "Política regional",
-      "tone": "red",
-      "title": "Hospital de Balsas: vistoria aponta atraso e cobra atualização da reforma",
-      "excerpt": "MPMA registrou atraso na reforma, insuficiência de leitos de UTI e limitações da hemodiálise. SES comprometeu-se a apresentar cronograma em 15 dias.",
-      "content": "<p>Em vistoria realizada em 7/10, o Ministério Público do Maranhão (MPMA) registrou atraso na reforma do Hospital Regional de Balsas, além de insuficiência de leitos de UTI e limitações no serviço de hemodiálise. O hospital atende 13 municípios da região.</p><p>Em reunião realizada em 8/10, a Secretaria de Estado da Saúde (SES) comprometeu-se a apresentar, em 15 dias, um relatório com cronograma atualizado da reforma.</p>",
-      "image": "",
-      "category": "Politica regional",
-      "tags": ["saude", "hospital", "balsas", "reforma", "mpma", "ses"],
-      "date": "2026-10-12",
-      "factDate": "2026-10-07",
-      "sourceDate": "2026-10-09",
-      "author": "Rafael Nogueira",
-      "reviewer": "Helena Duarte",
-      "checking": "CONFIRMADA",
-      "editorialStatus": "RASCUNHO_PARA_APROVACAO",
-      "recommendation": "PRONTO_PARA_REVISAO",
-      "publicationAuthorized": false,
-      "relevance": "9,7",
-      "reporting": "9,5",
-      "pending": "Ouvir a SES; confirmar cronograma e estágio real da reforma.",
-      "caveat": "O prazo de 15 dias é compromisso anunciado pela SES, não ordem judicial documentada. Ainda falta ouvir a SES sobre etapas, custos e cronograma efetivo.",
-      "sources": [
-        {
-          "name": "MPMA — nota oficial",
-          "url": "https://www.mpma.mp.br/balsas-mpma-realiza-vistoria-no-hospital-regional/",
-          "type": "Primária",
-          "accessed": true,
-          "note": "aberta e lida"
-        },
-        {
-          "name": "Jornal Pequeno — reportagem indicada pelo Radar",
-          "url": "https://jornalpequeno.com.br/2026/10/09/mpma-realiza-vistoria-no-hospital-regional-de-balsas/",
-          "type": "Imprensa",
-          "accessed": false,
-          "note": "acesso não confirmado nesta checagem"
-        }
-      ],
-      "structuredData": {
-        "@context": "https://schema.org",
-        "@type": "NewsArticle",
-        "headline": "Hospital de Balsas: vistoria aponta atraso e cobra atualização da reforma",
-        "datePublished": "2026-10-12T00:00:00-03:00",
-        "dateModified": "2026-10-12T00:00:00-03:00",
-        "author": { "@type": "Person", "name": "Rafael Nogueira" },
-        "publisher": { "@type": "Organization", "name": "Portal Sul MA", "logo": { "@type": "ImageObject", "url": "https://portalsulma.com/assets/portal-sulma-logo-sanitized.svg" } },
-        "description": "MPMA registrou atraso na reforma, insuficiência de leitos de UTI e limitações da hemodiálise. SES comprometeu-se a apresentar cronograma em 15 dias."
-      }
-    },
-    {
-      "id": "RADAR-MA-2026-10-12-06",
-      "slug": "combustivel-balsas-imperatriz",
+      "id": "RADAR-MA-2026-10-19-01",
+      "slug": "chuvas-isoladas-maranhao-19-26-outubro",
       "section": "Economia & agro",
       "tone": "blue",
-      "title": "Médias de gasolina: Balsas e Imperatriz entram em comparação amostral",
-      "excerpt": "Para 4–10/10, UOL informou média de R$ 7,33/litro em Balsas e queda semanal de 0,41%. Imperatriz registra R$ 6,47 — diferença de R$ 0,86/litro.",
-      "content": "<p>Para o período de 4 a 10 de outubro, o UOL informou, com base na ANP, média de R$ 7,33 por litro de gasolina em Balsas, com queda semanal de 0,41%. A reportagem indicada para Imperatriz registra R$ 6,47. A diferença é de R$ 0,86 por litro — R$ 43 em 50 litros, numa comparação hipotética.</p>",
-      "image": "",
+      "title": "INMET prevê chuvas isoladas no Maranhão entre 19 e 26 de outubro",
+      "excerpt": "Boletim aponta pancadas no interior do estado; recuperação da umidade do solo no Matopiba deve ocorrer de forma gradual.",
+      "content": "<p>O interior do Maranhão deve ter pancadas isoladas de chuva entre 19 e 26 de outubro, segundo o Instituto Nacional de Meteorologia (INMET). O boletim, divulgado nesta segunda-feira (19), aponta tempo estável em grande parte do Nordeste, com chuva localizada em áreas do Maranhão, do Piauí e da Bahia.</p><p>Para Balsas e o sul maranhense, o dado exige atenção à distribuição das precipitações: a previsão regional não informa quanto deverá chover em cada propriedade nem garante condições iguais para todas as lavouras.</p><p>No Matopiba, região formada por áreas do Maranhão, Tocantins, Piauí e Bahia, o retorno das chuvas deve ajudar a recompor a umidade do solo aos poucos. Essa avaliação foi apresentada pela meteorologista Patrícia Cassoli, da Meteored, em reportagem do Notícias Agrícolas publicada também nesta segunda-feira.</p><p>Segundo a especialista, a maior frequência de chuva na segunda quinzena de outubro pode favorecer uma melhora pontual, mas a recuperação ainda tende a ser gradual. Para acompanhar o início da safra, volume e regularidade das precipitações precisam ser considerados em conjunto.</p><p>A previsão do INMET vale até 26 de outubro e está sujeita a atualização. Os dados consultados não permitem afirmar que houve recuperação generalizada do solo ou perdas na produção de grãos em Balsas.</p><p><strong>Fontes:</strong> <a href=\"https://portal.inmet.gov.br/noticias/inmet-divulga-previs%C3%A3o-para-semana-de-19-a-26-de-outubro-de-2026\" target=\"_blank\" rel=\"noopener noreferrer\">INMET — previsão semanal de 19 a 26/10/2026</a>; <a href=\"https://portal.inmet.gov.br/uploads/informartivos/Informativo-42.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">INMET — Informativo Meteorológico 42/2026</a>; <a href=\"https://www.noticiasagricolas.com.br/noticias/tempo-e-clima/429875-previsao-indica-temporais-com-ventos-fortes-e-granizo-a-partir-de-quarta-feira-21-no-matopiba-chuva-comeca-a-ganhar-frequencia-mas-a-recuperacao-da-umidade-do-solo-ainda-sera-gradual.html\" target=\"_blank\" rel=\"noopener noreferrer\">Notícias Agrícolas — previsão e entrevista com Patrícia Cassoli (Meteored)</a></p>",
+      "image": "assets/chuvas-isoladas-maranhao-19-26-outubro-hero.webp",
       "category": "Economia & agro",
-      "tags": ["combustivel", "gasolina", "balsas", "imperatriz", "anp", "precos"],
-      "date": "2026-10-12",
-      "factDate": "2026-10-10",
-      "sourceDate": "2026-10-10",
+      "tags": [
+        "clima",
+        "chuva",
+        "maranhao",
+        "balsas",
+        "matopiba",
+        "plantio",
+        "graos"
+      ],
+      "date": "2026-10-19",
+      "factDate": "2026-10-19",
+      "sourceDate": "2026-10-19",
       "author": "Marina Azevedo",
       "reviewer": "Helena Duarte",
       "checking": "CONFIRMADA",
-      "editorialStatus": "RASCUNHO_PARA_APROVACAO",
-      "recommendation": "PRONTO_PARA_REVISAO",
-      "publicationAuthorized": false,
-      "relevance": "8,5",
-      "reporting": "9,2",
-      "pending": "Conferir o registro específico de Imperatriz na planilha da ANP; não inferir causa.",
-      "caveat": "São médias amostrais, não preços de todos os postos. A amostra de Balsas relatada pelo UOL reúne oito postos e não demonstra a causa da diferença.",
+      "editorialStatus": "PUBLICADO",
+      "recommendation": "PRONTO_PARA_INTEGRACAO",
+      "publicationAuthorized": true,
+      "relevance": "9,2",
+      "reporting": "8,8",
+      "pending": "Publicado com sucesso em 19/10/2026. Monitorar eventuais atualizações do INMET para a semana de 19–26/10.",
+      "caveat": null,
       "sources": [
         {
-          "name": "UOL Economia — levantamento em Balsas",
-          "url": "https://economia.uol.com.br/noticias/redacao/2026/10/10/gasolina-em-balsas-ma-ficou-mais-cara-ou-mais-barata-nesta-semana-veja-preco.ghtm",
-          "type": "Imprensa",
-          "accessed": true,
-          "note": "valor de Balsas confirmado em matéria aberta"
-        },
-        {
-          "name": "UOL Economia — levantamento em Imperatriz",
-          "url": "https://economia.uol.com.br/noticias/redacao/2026/10/10/preco-da-gasolina-em-imperatriz-ma-confira-os-valores-desta-semana.ghtm",
-          "type": "Imprensa",
-          "accessed": false,
-          "note": "acesso instável nesta checagem"
-        },
-        {
-          "name": "ANP — planilhas oficiais",
-          "url": "https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/precos/levantamento-de-precos-de-combustiveis-ultimas-semanas-pesquisadas",
+          "name": "INMET — previsão semanal de 19 a 26/10/2026",
+          "url": "https://portal.inmet.gov.br/noticias/inmet-divulga-previs%C3%A3o-para-semana-de-19-a-26-de-outubro-de-2026",
           "type": "Primária",
           "accessed": true,
-          "note": "conferir linha da semana e municípios"
-        }
-      ],
-      "structuredData": {
-        "@context": "https://schema.org",
-        "@type": "NewsArticle",
-        "headline": "Médias de gasolina: Balsas e Imperatriz entram em comparação amostral",
-        "datePublished": "2026-10-12T00:00:00-03:00",
-        "dateModified": "2026-10-12T00:00:00-03:00",
-        "author": { "@type": "Person", "name": "Marina Azevedo" },
-        "publisher": { "@type": "Organization", "name": "Portal Sul MA", "logo": { "@type": "ImageObject", "url": "https://portalsulma.com/assets/portal-sulma-logo-sanitized.svg" } },
-        "description": "Para 4–10/10, UOL informou média de R$ 7,33/litro em Balsas e queda semanal de 0,41%. Imperatriz registra R$ 6,47 — diferença de R$ 0,86/litro."
-      }
-    },
-    {
-      "id": "RADAR-MA-2026-10-12-08",
-      "slug": "homicidios-municipios",
-      "section": "Sociedade",
-      "tone": "red",
-      "title": "Quatro municípios do sul aparecem em levantamento sobre homicídios",
-      "excerpt": "Reportagens atribuem à SSP-MA/UEAC que 32 municípios não registraram homicídios dolosos de janeiro a setembro. No sul: Formosa da Serra Negra, Loreto, Sambaíba e São Domingos do Azeitão.",
-      "content": "<p>Reportagens que atribuem os dados à SSP-MA/UEAC afirmam que 32 municípios não registraram homicídios dolosos de janeiro a setembro de 2026. No sul, citam Formosa da Serra Negra, Loreto, Sambaíba e São Domingos do Azeitão, além de queda de 15,6% na regional de Balsas.</p>",
-      "image": "",
-      "category": "Sociedade",
-      "tags": ["seguranca", "homicidios", "ssp-ma", "balsas", "municipios"],
-      "date": "2026-10-12",
-      "factDate": "2026-09-30",
-      "sourceDate": "2026-10-09",
-      "author": "Clara Reis",
-      "reviewer": "Helena Duarte",
-      "checking": "PARCIALMENTE_CONFIRMADA",
-      "editorialStatus": "APURACAO_PENDENTE",
-      "recommendation": "PRECISA_APURAR",
-      "publicationAuthorized": false,
-      "relevance": "8,2",
-      "reporting": "7,8",
-      "pending": "Obter a tabela oficial SSP-MA/UEAC, definições, recorte por cidade e cálculo da regional.",
-      "caveat": "A tabela original ainda precisa ser localizada e confrontada. “Sem registro de homicídio doloso entre janeiro e setembro” não significa “sem violência”, “sem crimes” ou resultado do ano inteiro.",
-      "sources": [
-        {
-          "name": "Maranhão Hoje — levantamento atribuído à SSP-MA",
-          "url": "https://mahoje.com.br/32-municipios-do-maranhao-nao-registraram-homicidios-em-2026/",
-          "type": "Imprensa",
-          "accessed": true,
-          "note": "reportagem acessada"
+          "note": "Boletim publicado em 19/10 às 13h30 e atualizado às 16h25; corpo e PDF conferidos."
         },
         {
-          "name": "Diário Sul Maranhense — recorte regional",
-          "url": "https://diariosulmaranhense.com.br/2026/10/10/sao-domingos-do-azeitao-e-formosa-da-serra-negra-estao-entre-cidades-sem-homicidios-em-2026-no-maranhao/",
-          "type": "Imprensa",
+          "name": "INMET — Informativo Meteorológico 42/2026",
+          "url": "https://portal.inmet.gov.br/uploads/informartivos/Informativo-42.pdf",
+          "type": "Primária",
           "accessed": true,
-          "note": "reportagem acessada"
-        }
-      ],
-      "structuredData": {
-        "@context": "https://schema.org",
-        "@type": "NewsArticle",
-        "headline": "Quatro municípios do sul aparecem em levantamento sobre homicídios",
-        "datePublished": "2026-10-12T00:00:00-03:00",
-        "dateModified": "2026-10-12T00:00:00-03:00",
-        "author": { "@type": "Person", "name": "Clara Reis" },
-        "publisher": { "@type": "Organization", "name": "Portal Sul MA", "logo": { "@type": "ImageObject", "url": "https://portalsulma.com/assets/portal-sulma-logo-sanitized.svg" } },
-        "description": "Reportagens atribuem à SSP-MA/UEAC que 32 municípios não registraram homicídios dolosos de janeiro a setembro. No sul: Formosa da Serra Negra, Loreto, Sambaíba e São Domingos do Azeitão."
-      }
-    },
-    {
-      "id": "RADAR-MA-2026-10-12-09",
-      "slug": "chuvas-matopiba",
-      "section": "Economia & agro",
-      "tone": "blue",
-      "title": "MATOPIBA: projeções divergem sobre chuva na segunda quinzena",
-      "excerpt": "Duas análises de 9/10 projetam cenários diferentes: Notícias Agrícolas sugere avanço das precipitações; The AgriBiz alerta para distribuição irregular e baixo acumulado para MA e PI.",
-      "content": "<p>Duas análises de 9/10 projetam cenários diferentes: Notícias Agrícolas sugere avanço das precipitações sobre o MATOPIBA; The AgriBiz alerta para distribuição ainda irregular e baixo acumulado previsto para Maranhão e Piauí no início do período.</p>",
-      "image": "",
-      "category": "Economia & agro",
-      "tags": ["clima", "chuva", "matopiba", "agricultura", "previsao", "balsas"],
-      "date": "2026-10-12",
-      "factDate": null,
-      "sourceDate": "2026-10-09",
-      "author": "Marina Azevedo",
-      "reviewer": "Helena Duarte",
-      "checking": "PARCIALMENTE_CONFIRMADA",
-      "editorialStatus": "APURACAO_PENDENTE",
-      "recommendation": "PRECISA_APURAR",
-      "publicationAuthorized": false,
-      "relevance": "8,1",
-      "reporting": "7,3",
-      "pending": "Atualizar a previsão em fonte técnica e manter explícita a divergência entre cenários.",
-      "caveat": "São previsões de modelos e interpretações, não chuva já observada. Os cenários divergem, podem mudar e precisam ser atualizados no dia da publicação.",
-      "sources": [
-        {
-          "name": "Notícias Agrícolas — previsão e MATOPIBA",
-          "url": "https://www.noticiasagricolas.com.br/noticias/tempo-e-clima/429438-chuva-ganha-forca-no-centro-sul-e-deve-chegar-ao-matopiba-na-segunda-quinzena-de-outubro.html",
-          "type": "Imprensa",
-          "accessed": true,
-          "note": "análise acessada"
+          "note": "Previsão para 19–26/10, distinta das observações de 14–18/10."
         },
         {
-          "name": "The AgriBiz — análise meteorológica",
-          "url": "https://www.theagribiz.com/dentro-da-porteira/chuva-abrangente-beneficia-lavouras-na-segunda-quinzena-de-outubro/",
-          "type": "Imprensa",
+          "name": "Notícias Agrícolas — previsão e entrevista com Patrícia Cassoli (Meteored)",
+          "url": "https://www.noticiasagricolas.com.br/noticias/tempo-e-clima/429875-previsao-indica-temporais-com-ventos-fortes-e-granizo-a-partir-de-quarta-feira-21-no-matopiba-chuva-comeca-a-ganhar-frequencia-mas-a-recuperacao-da-umidade-do-solo-ainda-sera-gradual.html",
+          "type": "Imprensa especializada / fonte técnica identificada",
           "accessed": true,
-          "note": "análise acessada"
+          "note": "Publicado em 19/10 às 11h28; interpretação atribuída à especialista, sem entrevista feita pelo Portal Sul MA."
         }
       ],
       "structuredData": {
         "@context": "https://schema.org",
         "@type": "NewsArticle",
-        "headline": "MATOPIBA: projeções divergem sobre chuva na segunda quinzena",
-        "datePublished": "2026-10-12T00:00:00-03:00",
-        "dateModified": "2026-10-12T00:00:00-03:00",
-        "author": { "@type": "Person", "name": "Marina Azevedo" },
-        "publisher": { "@type": "Organization", "name": "Portal Sul MA", "logo": { "@type": "ImageObject", "url": "https://portalsulma.com/assets/portal-sulma-logo-sanitized.svg" } },
-        "description": "Duas análises de 9/10 projetam cenários diferentes: Notícias Agrícolas sugere avanço das precipitações; The AgriBiz alerta para distribuição irregular e baixo acumulado para MA e PI."
-      }
+        "headline": "INMET prevê chuvas isoladas no Maranhão entre 19 e 26 de outubro",
+        "description": "Boletim aponta pancadas no interior do estado; recuperação da umidade do solo no Matopiba deve ocorrer de forma gradual.",
+        "dateCreated": "2026-10-19",
+        "author": {
+          "@type": "Organization",
+          "name": "Portal Sul MA",
+          "url": "https://portalsulma.com/",
+          "description": "Texto na voz de Marina Azevedo, persona editorial assistida por IA sob supervisão humana."
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Portal Sul MA",
+          "url": "https://portalsulma.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://portalsulma.com/assets/portal-sulma-logo-sanitized.svg"
+          }
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://portalsulma.com/assets/chuvas-isoladas-maranhao-19-26-outubro-hero.webp",
+          "width": 1200,
+          "height": 630,
+          "caption": "Imagem ilustrativa."
+        }
+      },
+      "imageCaption": "Imagem ilustrativa.",
+      "imageAlt": "Ilustração de área agrícola com céu nublado e chuva ao fundo.",
+      "imageCredit": "",
+      "imageIsIllustrative": true
     }
   ]
 }
