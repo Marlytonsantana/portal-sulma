@@ -1,7 +1,6 @@
-# Portal Sul MA - Configuração de diretório e cache
-# ESTA REGRA DEVE SER A PRIMEIRA LINHA ABSOLUTA DO ARQUIVO
 DirectoryIndex index.html index.php
 
+# Portal Sul MA - Configuração de diretório e cache
 # Desabilita cache do LiteSpeed para HTML (força revalidação)
 <IfModule LiteSpeed>
     CacheDisable public
