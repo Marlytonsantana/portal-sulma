@@ -20,6 +20,10 @@ function copyAssets() {
   fs.copyFileSync(path.join(TEMPLATE_DIR, 'content.js'), path.join(DIST_DIR, 'content.js'));
   // Copia .htaccess para garantir DirectoryIndex e headers de cache/corrigir raiz
   fs.copyFileSync(path.join(TEMPLATE_DIR, '.htaccess'), path.join(DIST_DIR, '.htaccess'));
+  // Copia pasta data/ (posts.json) para o dist - necessário para content.js carregar as pautas
+  const srcData = path.join(TEMPLATE_DIR, 'data');
+  const destData = path.join(DIST_DIR, 'data');
+  if (fs.existsSync(srcData)) fs.cpSync(srcData, destData, { recursive: true });
 }
 
 function escapeHtml(text) {
