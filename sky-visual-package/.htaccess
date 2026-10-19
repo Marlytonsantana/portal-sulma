@@ -1,7 +1,7 @@
 DirectoryIndex index.html index.php
 
-# Portal Sul MA - Configuração de diretório e cache
-# Desabilita cache do LiteSpeed para HTML (força revalidação)
+# Portal Sul MA - Configuração mínima para servir index.html na raiz
+# Desabilita cache para HTML
 <IfModule LiteSpeed>
     CacheDisable public
     CacheDisable private
