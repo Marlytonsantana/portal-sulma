@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /scripts/
+Disallow: /data/
+
+Sitemap: https://portalsulma.com/sitemap.xml
+Host: https://portalsulma.com

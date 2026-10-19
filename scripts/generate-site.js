@@ -1,0 +1,77 @@
+const fs = require('fs');
+const path = require('path');
+
+const DATA_PATH = path.join(__dirname, '..', 'data', 'posts.json');
+const DIST_DIR = path.join(__dirname, '..', 'dist');
+const TEMPLATE_DIR = path.join(__dirname, '..');
+
+const data = JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'));
+const { site, posts } = data;
+
+if (!fs.existsSync(DIST_DIR)) fs.mkdirSync(DIST_DIR, { recursive: true });
+if (!fs.existsSync(path.join(DIST_DIR, 'assets'))) fs.mkdirSync(path.join(DIST_DIR, 'assets'), { recursive: true });
+
+function copyAssets() {
+  const srcAssets = path.join(TEMPLATE_DIR, 'assets');
+  const destAssets = path.join(DIST_DIR, 'assets');
+  if (fs.existsSync(srcAssets)) fs.cpSync(srcAssets, destAssets, { recursive: true });
+  fs.copyFileSync(path.join(TEMPLATE_DIR, 'styles.css'), path.join(DIST_DIR, 'styles.css'));
+  fs.copyFileSync(path.join(TEMPLATE_DIR, 'app.js'), path.join(DIST_DIR, 'app.js'));
+  fs.copyFileSync(path.join(TEMPLATE_DIR, 'content.js'), path.join(DIST_DIR, 'content.js'));
+}
+
+function escapeHtml(text) {
+  return String(text ?? '').replace(/&/g, '\u0026').replace(/</g, '\u003C').replace(/>/g, '\u003E').replace(/'/g, '\u2019').replace(/"/g, '\u0022');
+}
+
+function formatDate(dateStr) {
+  const [y, m, d] = dateStr.split('-');
+  const months = ['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ'];
+  return d + ' ' + months[parseInt(m)-1] + ' ' + y;
+}
+
+function articleTemplate(post) {
+  const url = site.url + '/artigo/' + post.slug + '/';
+  const ogImg = post.image ? site.url + '/' + post.image : site.url + '/' + site.logo;
+  const pub = new Date(post.date + 'T00:00:00-03:00').toISOString();
+  return '<!doctype html>\n<html lang="pt-BR" data-theme="light"><head>\n<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">\n<meta name="description" content="' + escapeHtml(post.excerpt) + '"><meta name="color-scheme" content="light dark">\n<meta name="theme-color" content="#0865d1" media="(prefers-color-scheme: light)">\n<meta name="theme-color" content="#0c1929" media="(prefers-color-scheme: dark)">\n<title>' + escapeHtml(post.title) + ' - ' + site.name + '</title>\n<link rel="canonical" href="' + url + '"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>\n<link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="preload" as="style" href="../styles.css">\n<link rel="stylesheet" href="../styles.css"><noscript><link rel="stylesheet" href="../styles.css"></noscript>\n<meta property="og:type" content="article"><meta property="og:title" content="' + escapeHtml(post.title) + '"><meta property="og:description" content="' + escapeHtml(post.excerpt) + '"><meta property="og:url" content="' + url + '"><meta property="og:image" content="' + ogImg + '"><meta property="og:site_name" content="' + site.name + '"><meta property="article:published_time" content="' + pub + '"><meta property="article:modified_time" content="' + pub + '"><meta property="article:author" content="' + escapeHtml(post.author) + '"><meta property="article:section" content="' + escapeHtml(post.section) + '"><meta property="article:tag" content="' + post.tags.join(', ') + '">\n<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="' + escapeHtml(post.title) + '"><meta name="twitter:description" content="' + escapeHtml(post.excerpt) + '"><meta name="twitter:image" content="' + ogImg + '">\n<script type="application/ld+json">' + JSON.stringify(post.structuredData) + '</script>\n\n<script src="../content.js" defer></script><script src="../app.js" defer></script>\n<script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.min.js" defer></script>\n<script src="https://cdn.jsdelivr.net/npm/web-vitals@latest/dist/web-vitals.attribution.iife.js" defer></script></head>\n<body data-layout="pulse"><a class="skip-link" href="#conteudo">Ir para o conteudo</a>\n<header class="site-header"><div class="masthead shell"><a class="brand" href="../" aria-label="' + site.name + ' - inicio"><img src="../assets/portal-sulma-logo-sanitized.svg" alt="' + site.name + '"></a><button class="compact-button theme-toggle" type="button" aria-pressed="false"><span aria-hidden="true">\u25D0</span><span data-theme-label>Tema escuro</span></button></div><nav class="section-nav" aria-label="Navegacao principal"><div class="shell nav-scroll"><a href="../">Início</a><a href="../" data-category="Politica regional">Política</a><a href="../" data-category="Economia & agro">Economia & Agro</a><a href="../" data-category="Sociedade">Cidades</a><a href="../" data-category="Região">Região</a></div></nav></header>\n<main id="conteudo"><article class="article-hero shell" aria-labelledby="article-title"><div><p class="eyebrow">' + escapeHtml(post.section) + '</p><h1 id="article-title">' + escapeHtml(post.title) + '</h1><div class="article-meta"><span>' + escapeHtml(post.author) + '</span><span>' + formatDate(post.date) + '</span></div></div></article>\n<section class="stories shell" aria-labelledby="article-content-title" style="padding-block:60px 80px"><div class="section-heading"><div><p class="eyebrow">Artigo completo</p><h2 id="article-content-title">' + escapeHtml(post.title) + '</h2></div></div><div class="story-grid" style="grid-template-columns:1fr;gap:0"><article class="story-card" data-tone="' + escapeHtml(post.tone) + '" data-category="' + escapeHtml(post.section) + '"><div class="story-content"><div class="card-top"><span class="tag">' + escapeHtml(post.section) + '</span></div><div class="article-body" style="font-family:var(--serif);font-size:clamp(1.05rem,2vw,1.25rem);line-height:1.7;color:var(--ink)">' + post.content + '</div><div class="card-meta"><span>' + escapeHtml(post.author) + '</span><span>' + formatDate(post.date) + '</span></div></article></div></section></main>\n<footer class="site-footer"><div class="shell footer-grid"><img src="../assets/portal-sulma-logo-sanitized.svg" alt="' + site.name + '"><p>Portal Sul MA — Jornalismo independente do Sul do Maranhão.</p><a href="#topo">Voltar ao topo</a></div></footer></body></html>';
+}
+
+function indexTemplate() {
+  var featured = posts.slice(0,4);
+  var latest = posts.slice(0,5);
+  return '<!doctype html>\n<html lang="pt-BR" data-theme="light"><head>\n<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="' + escapeHtml(site.description) + '"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#0865d1" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#0c1929" media="(prefers-color-scheme: dark)"><title>' + site.name + ' - ' + site.description + '</title><link rel="canonical" href="' + site.url + '/"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="preload" as="style" href="styles.css"><link rel="stylesheet" href="styles.css"><noscript><link rel="stylesheet" href="styles.css"></noscript>\n<meta property="og:type" content="website"><meta property="og:title" content="' + site.name + '"><meta property="og:description" content="' + escapeHtml(site.description) + '"><meta property="og:url" content="' + site.url + '/"><meta property="og:image" content="' + site.url + '/' + site.logo + '"><meta property="og:site_name" content="' + site.name + '"><meta property="og:locale" content="pt_BR"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="' + site.name + '"><meta name="twitter:description" content="' + escapeHtml(site.description) + '"><meta name="twitter:image" content="' + site.url + '/' + site.logo + '">\n<script type="application/ld+json">{"@context":"https://schema.org","@type":["WebSite","NewsMediaOrganization"],"name":"' + site.name + '","url":"' + site.url + '/","description":"' + escapeHtml(site.description) + '","publisher":{"@type":"Organization","name":"' + site.name + '","logo":{"@type":"ImageObject","url":"' + site.url + '/' + site.logo + '"}},"sameAs":[' + (site.social.instagram?'"' + site.social.instagram + '"':'') + (site.social.facebook?', "' + site.social.facebook + '"':'') + '],"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"' + site.url + '/?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>\n\n<script src="content.js" defer></script><script src="app.js" defer></script><script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/web-vitals@latest/dist/web-vitals.attribution.iife.js" defer></script></head>\n<body data-layout="pulse"><a class="skip-link" href="#conteudo">Ir para o conteudo</a>\n<header class="site-header"><div class="masthead shell"><a class="brand" href="#topo" aria-label="' + site.name + ' - inicio"><img src="assets/portal-sulma-logo-sanitized.svg" alt="' + site.name + '"></a><button class="compact-button theme-toggle" type="button" aria-pressed="false"><span aria-hidden="true">\u25D0</span><span data-theme-label>Tema escuro</span></button></div><nav class="section-nav" aria-label="Navegacao principal"><div class="shell nav-scroll"><a href="#topo" class="active" data-category="all">Início</a><a href="#topo" data-category="Politica regional">Política</a><a href="#topo" data-category="Economia & agro">Economia & Agro</a><a href="#topo" data-category="Sociedade">Cidades</a><a href="#topo" data-category="Região">Região</a></div></nav></header>\n<main id="conteudo"><section class="hero shell" id="topo" aria-labelledby="hero-title"><div class="hero-copy"><p class="eyebrow">' + site.name + '</p><h1 id="hero-title">O jornalismo independente e a cobertura aprofundada do Sul do Maranhão</h1></div><div class="hero-signal" aria-hidden="true"><span>' + featured.length + '</span><b>NOTÍCIAS</b><i></i></div></section><section class="control-deck" aria-labelledby="view-title"><div class="shell controls-grid"><div><p class="control-label" id="view-title">Composição da capa</p><div class="layout-switcher" role="group" aria-labelledby="view-title"><button type="button" data-layout-choice="pulse" aria-pressed="true"><span>01</span> Pulse</button><button type="button" data-layout-choice="ledger" aria-pressed="false"><span>02</span> Ledger</button><button type="button" data-layout-choice="horizon" aria-pressed="false"><span>03</span> Horizon</button></div></div><div class="search-panel"><label for="search">Buscar notícias</label><input id="search" type="search" placeholder="Balsas, gasolina, chuva..." autocomplete="off"></div></section><section class="stories shell" id="pautas" aria-labelledby="stories-title"><div class="section-heading"><div><p class="eyebrow">Últimas notícias</p><h2 id="stories-title">Principais manchetes</h2></div><p id="result-count" role="status" aria-live="polite">' + posts.length + ' notícias exibidas</p></div><div class="story-grid" data-story-grid></div><noscript><p class="noscript">Ative o JavaScript para renderizar as notícias e os controles desta pagina.</p></noscript></section></main><footer class="site-footer"><div class="shell footer-grid"><img src="assets/portal-sulma-logo-sanitized.svg" alt="' + site.name + '"><p>Portal Sul MA — Jornalismo independente do Sul do Maranhão.</p><a href="#topo">Voltar ao topo</a></div></footer><template id="empty-template"><div class="empty-state"><strong>Nenhuma notícia encontrada.</strong><span>Ajuste a busca ou o filtro.</span></div></template></body></html>';
+}
+
+function generateSitemap() {
+  var urls = [{url:site.url+'/',lastmod:data.lastUpdated,changefreq:'daily',priority:1.0},{url:site.url+'/categoria/politica-regional/',lastmod:data.lastUpdated,changefreq:'weekly',priority:0.8},{url:site.url+'/categoria/economia-agro/',lastmod:data.lastUpdated,changefreq:'weekly',priority:0.8},{url:site.url+'/categoria/sociedade/',lastmod:data.lastUpdated,changefreq:'weekly',priority:0.8}];
+  posts.forEach(function(p){if(p.publicationAuthorized)urls.push({url:site.url+'/artigo/'+p.slug+'/',lastmod:p.date,changefreq:'monthly',priority:0.7});});
+  return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls.map(function(u){return '  <url>\n    <loc>' + u.url + '</loc>\n    <lastmod>' + u.lastmod + '</lastmod>\n    <changefreq>' + u.changefreq + '</changefreq>\n    <priority>' + u.priority + '</priority>\n  </url>';}).join('\n') + '\n</urlset>';
+}
+
+function generateRobots() {
+  return 'User-agent: *\nAllow: /\nDisallow: /assets/\nDisallow: /scripts/\nDisallow: /data/\n\nSitemap: ' + site.url + '/sitemap.xml\nHost: ' + site.url + '\n';
+}
+
+function generateRSS() {
+  var date = new Date(data.lastUpdated).toUTCString();
+  var items = posts.filter(function(p){return p.publicationAuthorized;}).map(function(p){return '<item><title><![CDATA[' + p.title + ']]></title><link>' + site.url + '/artigo/' + p.slug + '/</link><guid isPermaLink="true">' + site.url + '/artigo/' + p.slug + '/</guid><description><![CDATA[' + p.excerpt + ']]></description><pubDate>' + new Date(p.date + 'T00:00:00-03:00').toUTCString() + '</pubDate><category>' + escapeHtml(p.section) + '</category><author>' + escapeHtml(p.author) + '</author></item>';}).join('');
+  return '<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n<channel>\n<title>' + site.name + '</title>\n<link>' + site.url + '/</link>\n<description>' + escapeHtml(site.description) + '</description>\n<language>pt-BR</language>\n<lastBuildDate>' + date + '</lastBuildDate>\n<atom:link href="' + site.url + '/feed.xml" rel="self" type="application/rss+xml" />\n' + items + '\n</channel>\n</rss>';
+}
+
+function generateJSONFeed() {
+  var items = posts.filter(function(p){return p.publicationAuthorized;}).map(function(p){return {id:site.url+'/artigo/'+p.slug+'/',url:site.url+'/artigo/'+p.slug+'/',title:p.title,content_html:p.content,summary:p.excerpt,date_published:new Date(p.date+'T00:00:00-03:00').toISOString(),author:{name:p.author},tags:p.tags,_publicationAuthorized:p.publicationAuthorized};});
+  return JSON.stringify({version:"https://jsonfeed.org/version/1.1",title:site.name,home_page_url:site.url+'/',feed_url:site.url+'/feed.json',description:site.description,language:"pt-BR",items:items}, null, 2);
+}
+
+console.log('[generate-site] Iniciando...');
+copyAssets(); console.log('[generate-site] Assets copiados');
+fs.writeFileSync(path.join(DIST_DIR,'index.html'),indexTemplate()); console.log('[generate-site] index.html');
+var pub = posts.filter(function(p){return p.publicationAuthorized;});
+pub.forEach(function(p){var d=path.join(DIST_DIR,'artigo',p.slug);if(!fs.existsSync(d))fs.mkdirSync(d,{recursive:true});fs.writeFileSync(path.join(d,'index.html'),articleTemplate(p));});
+console.log('[generate-site] ' + pub.length + ' artigos');
+fs.writeFileSync(path.join(DIST_DIR,'sitemap.xml'),generateSitemap()); console.log('[generate-site] sitemap.xml');
+fs.writeFileSync(path.join(DIST_DIR,'robots.txt'),generateRobots()); console.log('[generate-site] robots.txt');
+fs.writeFileSync(path.join(DIST_DIR,'feed.xml'),generateRSS()); console.log('[generate-site] feed.xml');
+fs.writeFileSync(path.join(DIST_DIR,'feed.json'),generateJSONFeed()); console.log('[generate-site] feed.json');
+console.log('\nOK: ' + DIST_DIR + ' pronto para deploy Hostinger');
