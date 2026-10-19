@@ -8,7 +8,7 @@ A barra de contato aparece no cabeçalho e no rodapé da capa raiz e dos templat
 - E-mail: `site.contact.email`, somente o endereço, sem prefixo `mailto:`.
 - WhatsApp: `site.contact.whatsapp`, com código do país, DDD e número, somente dígitos ou `+` inicial.
 
-Contatos informados pelo usuário em 19/10/2026: `contato@portalsulma.com` e `(98) 9107-2673`. Links configurados: `mailto:contato@portalsulma.com` e `https://wa.me/559891072673`, com o código do Brasil e os dígitos fornecidos. A configuração dos links não comprova a existência da caixa postal ou o registro do número no WhatsApp.
+Contatos informados pelo usuário em 19/10/2026: `contato@portalsulma.com` e `(98) 99107-2673`. Links configurados: `mailto:contato@portalsulma.com` e `https://wa.me/5598991072673`, com o código do Brasil e o número corrigido pelo usuário. A conta Hostinger conectada confirmou a caixa `contato@portalsulma.com`; o registro do número no WhatsApp e o acesso individual da equipe à caixa não foram verificados.
 
 Campos vazios ou inválidos produzem botões nativos desabilitados com identificação acessível “em breve”, sem links fictícios ou `href="#"`. Com valores válidos, o gerador cria `mailto:` e `https://wa.me/` automaticamente.
 

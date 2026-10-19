@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "scope": "site-only",
+  "timezone": "America/Araguaina",
+  "pilot": {
+    "startDate": "2026-10-19",
+    "endDate": "2026-10-25",
+    "targetNewArticlesPerDay": 1
+  },
+  "recipient": "contato@portalsulma.com",
+  "blueprint": "BLUEPRINT-PortalSulMA.md",
+  "deliveries": []
+}
