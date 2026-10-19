@@ -471,3 +471,12 @@ html[data-theme="light"] .publication-lock { opacity: 1; }
   .story-media { display: none !important; }
   .story-content, body[data-layout="horizon"] .story-content { padding: 0; }
 }
+
+/* Instagram oficial — links externos no menu e no rodapé. */
+.footer-links { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; min-width: 0; }
+.footer-links > a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding-block: 8px; font-size: .75rem; }
+.instagram-link { overflow-wrap: anywhere; }
+.instagram-link > [aria-hidden] { flex: 0 0 auto; }
+@media (max-width: 800px) {
+  .footer-links { grid-column: 1 / -1; }
+}
