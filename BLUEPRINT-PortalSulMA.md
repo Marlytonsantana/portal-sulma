@@ -78,7 +78,7 @@ Se faltar imagem, licença, aprovação ou conformidade técnica, não emitir �
 
 ## 6. Registro durável, automação e prevenção de duplicidade
 
-`data/editorial-delivery-queue.json` registra o índice das entregas; os arquivos e evidências de aprovação ficam em pacotes privados persistentes, referenciados por identificadores. Não inserir texto de notícia não aprovado no `posts.json` servido nem tratar o histórico desta conversa como uma fila acessível por qualquer execução futura.
+O controle operacional das entregas fica em arquivo privado persistente, identificado na configuração da automação; os anexos, evidências, hashes e recibos também permanecem privados. `data/editorial-delivery-queue.json` no repositório público é apenas referência estrutural e não é a fila canônica. Não inserir texto de notícia não aprovado no `posts.json` servido nem tratar o histórico desta conversa como uma fila acessível por qualquer execução futura.
 
 Cada entrada precisa de slug, versão, referência persistente dos anexos e do manifesto, hashes, evidência de aprovação editorial e de imagem por Tom, estado e recibo. Estados: `DRAFT`, `AWAITING_SELECTION`, `AWAITING_IMAGE`, `AWAITING_APPROVAL`, `READY_TO_SEND`, `SENDING`, `SENT`, `PUBLICATION_PENDING`, `PUBLISHED` ou `ERROR`. A fila começa vazia; não há aprovação prévia de pauta alguma neste documento. Antes do envio, reservar a versão como `SENDING` com identificador da execução, data e hash usando controle de concorrência. Conflito de reserva bloqueia o envio; reserva abandonada exige consulta a Enviados antes de qualquer recuperação.
 
@@ -86,7 +86,7 @@ A rotina de envio consulta a fila e valida os anexos reais e as aprovações da 
 
 A chave de deduplicação combina slug, versão e hash do manifesto. Antes de enviar, verificar recibo e a pasta Enviados por assunto/chave. Após aceitação confirmada pela Hostinger e cópia em Enviados, registrar data, assunto e identificador retornado; ausência de ID não autoriza inventá-lo. Em timeout ou resultado ambíguo, consultar Enviados antes de qualquer tentativa. Não prometer exatamente uma entrega em falhas concorrentes: a rotina deve operar com um único responsável por vez e pausar se houver disputa de estado.
 
-Enquanto o PR #1 estiver aberto, os documentos e a fila canônicos desta revisão estão em `codex/instagram-menu-rodape`. Após merge, usar `main`. Se o PR for encerrado sem merge ou houver divergência de versões, suspender a entrega até resolver a referência. Atualizações editoriais devem usar branch/PR; nunca escrever em `main` como atalho, pois isso dispara produção.
+Enquanto o PR #1 estiver aberto, os documentos públicos desta revisão estão em `codex/instagram-menu-rodape`. Após merge, usar `main` para esses documentos. A fila operacional e seus recibos permanecem no registro privado configurado na automação, independentemente da branch. Se o PR for encerrado sem merge ou houver divergência de versões, suspender a entrega até resolver a referência. Atualizações editoriais devem usar branch/PR; nunca escrever em `main` como atalho, pois isso dispara produção.
 
 ### Rotinas e escopo
 
@@ -145,3 +145,8 @@ A equipe deve apresentar publicamente: “Perfil editorial assistido por IA, sob
 - Envio administrativo do alinhamento: será registrado após confirmação real da Hostinger.
 
 Versão 2.2 substitui o fluxo “100% autônomo sem Tom” e a cadência antiga de segunda/quarta/sexta. Preserva a curadoria humana, a aprovação e as decisões visuais já aceitas.
+
+
+### Regra de crédito de imagem — confirmação de Tom em 19/10/2026
+
+Fotografias recebem o nome do fotógrafo informado. Imagens de IA não recebem crédito de fotógrafo ou plataforma. Usar legenda “Imagem ilustrativa” para distinguir a ilustração de registro factual do acontecimento. A origem permanece registrada no manifesto editorial privado, sem inventar fotógrafo, local ou data. Para a pauta piloto sobre chuva, Tom forneceu a imagem e confirmou sua origem de IA.
