@@ -1,13 +1,34 @@
 (() => {
   'use strict';
+  const body = document.body;
+  const root = document.documentElement;
+
+  const themeButton = document.querySelector('.theme-toggle');
+  const themeLabel = document.querySelector('[data-theme-label]');
+  function applyTheme(theme) {
+    root.dataset.theme = theme;
+    const dark = theme === 'dark';
+    if (themeButton) themeButton.setAttribute('aria-pressed', String(dark));
+    if (themeLabel) themeLabel.textContent = dark ? 'Tema claro' : 'Tema escuro';
+    try { localStorage.setItem('portal-theme', theme); } catch (_) {}
+  }
+  if (themeButton) themeButton.addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
+
+  let storedTheme = '';
+  try { storedTheme = localStorage.getItem('portal-theme') || ''; } catch (_) {}
+  const requestedTheme = new URLSearchParams(location.search).get('theme');
+  const initialTheme = ['light', 'dark'].includes(requestedTheme)
+    ? requestedTheme
+    : (storedTheme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+  applyTheme(initialTheme);
+
   const data = window.PORTAL_EDITORIAL;
   if (!data || !Array.isArray(data.stories)) return;
 
-  const body = document.body;
-  const root = document.documentElement;
   const grid = document.querySelector('[data-story-grid]');
   const count = document.querySelector('#result-count');
   const search = document.querySelector('#search');
+  if (!grid || !count || !search) return;
   let currentCategory = 'all';
 
   const escapeHTML = (value) => String(value ?? '').replace(/[&<>'"]/g, char => ({
@@ -26,10 +47,10 @@
   };
 
   const storyHTML = (story, index) => `<article class="story-card" data-tone="${escapeHTML(story.tone)}" data-category="${escapeHTML(story.section)}" data-article-id="${escapeHTML(story.slug)}">
-    <div class="story-media" data-index="0${index + 1}" aria-hidden="true"></div>
+    <a class="story-media" data-index="0${index + 1}" href="/artigo/${encodeURIComponent(story.slug)}/" aria-label="Abrir: ${escapeHTML(story.title)}">${story.image ? `<img src="${escapeHTML(story.image)}" alt="${escapeHTML(story.imageAlt || '')}" loading="lazy" width="1200" height="630">` : ''}</a>
     <div class="story-content">
       <div class="card-top"><span class="tag">${escapeHTML(story.section)}</span></div>
-      <h3>${escapeHTML(story.title)}</h3>
+      <h3><a href="/artigo/${encodeURIComponent(story.slug)}/">${escapeHTML(story.title)}</a></h3>
       <p class="summary">${escapeHTML(story.summary)}</p>
       <div class="card-meta"><span>${escapeHTML(story.lead)}</span><span>${formatDate(story.date)}</span></div>
     </div>
@@ -83,23 +104,11 @@
 
   search.addEventListener('input', render);
 
-  const themeButton = document.querySelector('.theme-toggle');
-  const themeLabel = document.querySelector('[data-theme-label]');
-  function applyTheme(theme) {
-    root.dataset.theme = theme;
-    const dark = theme === 'dark';
-    themeButton.setAttribute('aria-pressed', String(dark));
-    themeLabel.textContent = dark ? 'Tema claro' : 'Tema escuro';
-    try { localStorage.setItem('portal-theme', theme); } catch (_) {}
-  }
-  themeButton.addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
-
-  let storedLayout = 'pulse'; let storedTheme = '';
-  try { storedLayout = localStorage.getItem('portal-layout') || 'pulse'; storedTheme = localStorage.getItem('portal-theme') || ''; } catch (_) {}
+  let storedLayout = 'pulse';
+  try { storedLayout = localStorage.getItem('portal-layout') || 'pulse'; } catch (_) {}
   if (!['pulse','ledger','horizon'].includes(storedLayout)) storedLayout = 'pulse';
   const layoutButton = document.querySelector(`[data-layout-choice="${storedLayout}"]`);
   if (layoutButton) layoutButton.click();
-  applyTheme(storedTheme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
 
   if (typeof webVitals !== 'undefined') {
     const vitals = ['LCP', 'CLS', 'INP', 'FCP', 'TTFB'];

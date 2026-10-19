@@ -222,7 +222,8 @@ img { display: block; max-width: 100%; }
 .story-card:hover { border-color: var(--line); }
 .story-card[data-tone="red"] { --accent: var(--red); }
 .story-card[data-tone="blue"] { --accent: var(--blue); }
-.story-media { position: relative; overflow: hidden; min-height: 140px; margin: calc(-1 * var(--card-pad)) calc(-1 * var(--card-pad)) 24px; border-bottom: 1px solid var(--soft-line); background: color-mix(in srgb, var(--accent) 9%, var(--surface)); }
+.story-media { position: relative; display: block; overflow: hidden; min-height: 140px; margin: calc(-1 * var(--card-pad)) calc(-1 * var(--card-pad)) 24px; border-bottom: 1px solid var(--soft-line); background: color-mix(in srgb, var(--accent) 9%, var(--surface)); }
+.story-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .story-media::before { content: ""; position: absolute; inset: 20px; border-top: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); border-bottom: 1px solid color-mix(in srgb, var(--accent) 20%, transparent); }
 .story-media::after { content: attr(data-index); position: absolute; right: 24px; bottom: 16px; font-family: var(--display); font-size: clamp(3.25rem, 6vw, 5.5rem); line-height: 1; color: var(--accent); opacity: .28; }
 .card-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 14px; }
@@ -306,6 +307,10 @@ body[data-layout="horizon"] .story-card h3 { max-width: 28ch; font-size: clamp(1
 .article-meta { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 20px; margin-top: 26px; color: var(--muted); font-size: .8125rem; }
 .article-meta span { font-weight: 600; }
 .article-body { max-width: 70ch; margin-inline: auto; }
+.article-media { width: min(calc(100% - var(--pad) * 2), 1120px); margin: clamp(28px, 5vw, 56px) auto 0; }
+.article-media img { width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border: 1px solid var(--soft-line); }
+.article-media figcaption { margin-top: 8px; color: var(--muted); font-size: .75rem; }
+.editorial-disclosure { max-width: 70ch; margin: 32px auto 0; padding: 18px 20px; border-left: 3px solid var(--blue); background: color-mix(in srgb, var(--blue) 7%, var(--surface)); color: var(--muted); font-family: var(--sans); font-size: .875rem; }
 .carousel::-webkit-scrollbar { height: 8px; }
 .carousel::-webkit-scrollbar-track { background: #21364e; border-radius: 4px; }
 .carousel::-webkit-scrollbar-thumb { background: #79b7ff; border-radius: 4px; }
@@ -344,6 +349,9 @@ body[data-layout="horizon"] .story-card h3 { max-width: 28ch; font-size: clamp(1
   .status-ribbon span { display: block; margin-top: 3px; }
   .masthead { gap: 16px; }
   .brand { max-width: 235px; }
+  .article-hero { width: 100%; padding-inline: var(--pad); }
+  .article-hero h1 { max-width: 100%; font-size: clamp(1.8rem, 8vw, 2.5rem); overflow-wrap: anywhere; }
+  .article-media { width: calc(100% - var(--pad) * 2); }
   /* Manter o nome acessível do botão quando o rótulo visual fica oculto. */
   .compact-button [data-theme-label] { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
   .compact-button { width: 46px; height: 46px; padding: 10px; }
