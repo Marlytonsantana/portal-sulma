@@ -13,9 +13,11 @@
       "content_html": "<p>O interior do Maranhão deve ter pancadas isoladas de chuva entre 19 e 26 de outubro, segundo o Instituto Nacional de Meteorologia (INMET). O boletim, divulgado nesta segunda-feira (19), aponta tempo estável em grande parte do Nordeste, com chuva localizada em áreas do Maranhão, do Piauí e da Bahia.</p><p>Para Balsas e o sul maranhense, o dado exige atenção à distribuição das precipitações: a previsão regional não informa quanto deverá chover em cada propriedade nem garante condições iguais para todas as lavouras.</p><p>No Matopiba, região formada por áreas do Maranhão, Tocantins, Piauí e Bahia, o retorno das chuvas deve ajudar a recompor a umidade do solo aos poucos. Essa avaliação foi apresentada pela meteorologista Patrícia Cassoli, da Meteored, em reportagem do Notícias Agrícolas publicada também nesta segunda-feira.</p><p>Segundo a especialista, a maior frequência de chuva na segunda quinzena de outubro pode favorecer uma melhora pontual, mas a recuperação ainda tende a ser gradual. Para acompanhar o início da safra, volume e regularidade das precipitações precisam ser considerados em conjunto.</p><p>A previsão do INMET vale até 26 de outubro e está sujeita a atualização. Os dados consultados não permitem afirmar que houve recuperação generalizada do solo ou perdas na produção de grãos em Balsas.</p><p><strong>Fontes:</strong> <a href=\"https://portal.inmet.gov.br/noticias/inmet-divulga-previs%C3%A3o-para-semana-de-19-a-26-de-outubro-de-2026\" target=\"_blank\" rel=\"noopener noreferrer\">INMET — previsão semanal de 19 a 26/10/2026</a>; <a href=\"https://portal.inmet.gov.br/uploads/informartivos/Informativo-42.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">INMET — Informativo Meteorológico 42/2026</a>; <a href=\"https://www.noticiasagricolas.com.br/noticias/tempo-e-clima/429875-previsao-indica-temporais-com-ventos-fortes-e-granizo-a-partir-de-quarta-feira-21-no-matopiba-chuva-comeca-a-ganhar-frequencia-mas-a-recuperacao-da-umidade-do-solo-ainda-sera-gradual.html\" target=\"_blank\" rel=\"noopener noreferrer\">Notícias Agrícolas — previsão e entrevista com Patrícia Cassoli (Meteored)</a></p>",
       "summary": "Boletim aponta pancadas no interior do estado; recuperação da umidade do solo no Matopiba deve ocorrer de forma gradual.",
       "date_published": "2026-10-19T03:00:00.000Z",
-      "author": {
-        "name": "Marina Azevedo"
-      },
+      "authors": [
+        {
+          "name": "Marina Azevedo"
+        }
+      ],
       "tags": [
         "clima",
         "chuva",
@@ -24,8 +26,7 @@
         "matopiba",
         "plantio",
         "graos"
-      ],
-      "_publicationAuthorized": true
+      ]
     }
   ]
 }

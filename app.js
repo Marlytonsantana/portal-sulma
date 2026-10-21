@@ -82,7 +82,23 @@
     });
   }
 
-  render();
+  // O build já entrega os cards autorizados no HTML. O JavaScript só aprimora
+  // a experiência; se falhar ou estiver desativado, a capa continua legível.
+  const initialParams = new URLSearchParams(location.search);
+  const requestedQuery = initialParams.get('q') || '';
+  const requestedCategory = initialParams.get('categoria') || 'all';
+  if (requestedQuery) search.value = requestedQuery;
+  if (requestedCategory !== 'all' && data.stories.some(story => story.section === requestedCategory)) {
+    currentCategory = requestedCategory;
+    document.querySelectorAll('[data-category]').forEach(item => item.classList.toggle('active', item.dataset.category === currentCategory));
+  }
+  if (requestedQuery || currentCategory !== 'all') {
+    render();
+  } else {
+    const cards = grid.querySelectorAll('.story-card');
+    count.textContent = `${cards.length} ${cards.length === 1 ? 'notícia exibida' : 'notícias exibidas'}`;
+    requestAnimationFrame(() => animateStoryCards(cards));
+  }
 
   document.querySelectorAll('[data-layout-choice]').forEach(button => button.addEventListener('click', () => {
     const layout = button.dataset.layoutChoice;
@@ -104,8 +120,10 @@
 
   search.addEventListener('input', render);
 
-  let storedLayout = 'pulse';
-  try { storedLayout = localStorage.getItem('portal-layout') || 'pulse'; } catch (_) {}
+  let storedLayout = initialParams.get('layout') || 'pulse';
+  if (!initialParams.get('layout')) {
+    try { storedLayout = localStorage.getItem('portal-layout') || 'pulse'; } catch (_) {}
+  }
   if (!['pulse','ledger','horizon'].includes(storedLayout)) storedLayout = 'pulse';
   const layoutButton = document.querySelector(`[data-layout-choice="${storedLayout}"]`);
   if (layoutButton) layoutButton.click();

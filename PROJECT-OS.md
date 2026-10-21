@@ -24,13 +24,14 @@ index.html + styles.css + app.js + content.js = 3 layouts (Pulse/Ledger/Horizon)
 - ✅ RSYNC excludes: wp-content/, wp-config.php, .htaccess, .well-known/, *.log
 - ✅ publicationAuthorized: false gate on all posts
 
-## Current State (19/10/2026)
-- ✅ Visual approved 10/10
-- ✅ 4 pautas structured in posts.json (all publicationAuthorized: false)
-- ✅ Workflow green (last: e888c5b)
-- ✅ Files deployed to public_html/ (index.html, assets/, styles.css, app.js, content.js, feeds, sitemap)
-- ✅ .htaccess fixed: root serves index.html, WP paths preserved
-- ⏳ Awaiting: LiteSpeed cache purge confirmation, final visual verification
+## Current State (21/10/2026)
+- ✅ 1 matéria real autorizada em `data/posts.json`; protótipos antigos não fazem parte da fonte atual
+- ✅ Versão candidata local consolida contatos oficiais, cards SSR, `content.js` gerado, template único de artigo e validação ampliada
+- ✅ Build e `scripts/validate-build.js` passam localmente; Chrome real validou desktop/mobile, claro/escuro e Pulse/Ledger/Horizon sem exceções de console
+- ✅ `.htaccess` preservado: raiz serve `index.html` e caminhos WordPress continuam excluídos do rsync
+- ⏳ Alterações de 21/10 ainda não foram commitadas nem implantadas
+- ⏳ IMAP Hostinger ainda requer validação operacional com credencial mascarada e staging seguro
+- ⛔ Nenhum deploy sem autorização explícita de Ton
 
 ## Commands
 ```bash
