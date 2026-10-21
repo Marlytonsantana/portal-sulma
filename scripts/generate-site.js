@@ -66,7 +66,7 @@ function storyMarkup(post, index) {
   const image = post.image
     ? `<img src="${escapeHtml(rootPath(post.image))}" alt="${escapeHtml(post.imageAlt || '')}" loading="${index === 0 ? 'eager' : 'lazy'}" width="1200" height="630">`
     : '';
-  return `<article class="story-card" data-tone="${escapeHtml(post.tone || 'blue')}" data-category="${escapeHtml(post.section)}" data-article-id="${escapeHtml(post.slug)}">
+  return `<article class="story-card" data-tone="${escapeHtml(post.tone || 'blue')}" data-category="${escapeHtml(post.section)}" data-article-id="${escapeHtml(post.slug)}" data-href="${href}" tabindex="0" role="link">
     <a class="story-media" data-index="${String(index + 1).padStart(2, '0')}" href="${href}" aria-label="Abrir: ${escapeHtml(post.title)}">${image}</a>
     <div class="story-content">
       <div class="card-top"><span class="tag">${escapeHtml(post.section)}</span></div>
@@ -149,6 +149,8 @@ function articleTemplate(post) {
   const imageUrl = post.image ? `${site.url}/${post.image}` : `${site.url}/${site.logo}`;
   const publishedAt = new Date(`${post.date}T00:00:00-03:00`).toISOString();
   const imageMarkup = post.image ? `<figure class="article-media"><img src="${escapeHtml(rootPath(post.image))}" alt="${escapeHtml(post.imageAlt || '')}" width="1200" height="630"><figcaption>${escapeHtml(post.imageCaption || 'Imagem ilustrativa.')}</figcaption></figure>` : '';
+  const shareText = `${post.title} — ${url}`;
+  const shareMarkup = `<nav class="article-share" aria-label="Compartilhar esta notícia"><strong>Compartilhe</strong><div class="share-links"><a class="share-button share-button--whatsapp" href="https://wa.me/?text=${encodeURIComponent(shareText)}" target="_blank" rel="noopener noreferrer">WhatsApp</a><a class="share-button share-button--facebook" href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}" target="_blank" rel="noopener noreferrer">Facebook</a><a class="share-button share-button--x" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(url)}" target="_blank" rel="noopener noreferrer">X</a><a class="share-button share-button--instagram" href="https://www.instagram.com/portalsulma/" target="_blank" rel="noopener noreferrer" title="Abra o Instagram do Portal Sul MA e compartilhe pelo aplicativo">Instagram</a><a class="share-button share-button--email" href="mailto:?subject=${encodeURIComponent(post.title)}&body=${encodeURIComponent(shareText)}">E-mail</a><button class="share-button share-button--copy" type="button" data-copy-url="${escapeHtml(url)}">Copiar link</button><button class="share-button share-button--native" type="button" data-native-share data-share-title="${escapeHtml(post.title)}" data-share-url="${escapeHtml(url)}">Compartilhar</button></div><p class="share-note">No celular, “Compartilhar” abre as opções disponíveis, incluindo WhatsApp e Instagram.</p></nav>`;
   const disclosure = post.author ? `<p class="editorial-disclosure"><strong>${escapeHtml(post.author)}</strong> é uma persona editorial assistida por IA, com supervisão humana do Portal Sul MA.</p>` : '';
   return `<!doctype html>
 <html lang="pt-BR" data-theme="light"><head>
@@ -162,7 +164,7 @@ function articleTemplate(post) {
 ${headerMarkup('/')}
 <main id="conteudo"><article id="topo"><header class="article-hero shell" aria-labelledby="article-title"><p class="eyebrow">${escapeHtml(post.section)}</p><h1 id="article-title">${escapeHtml(post.title)}</h1><div class="article-meta"><span>${escapeHtml(post.author)}</span><span>${formatDate(post.date)}</span></div></header>
 ${imageMarkup}
-<section class="article-section shell" aria-label="Texto da notícia"><div class="article-body">${post.content}</div>${disclosure}<div class="article-closing"><span>${escapeHtml(post.author)}</span><span>${formatDate(post.date)}</span></div></section></article></main>
+<section class="article-section shell" aria-label="Texto da notícia"><div class="article-body">${post.content}</div>${shareMarkup}${disclosure}<div class="article-closing"><span>${escapeHtml(post.author)}</span><span>${formatDate(post.date)}</span></div></section></article></main>
 ${footerMarkup('/')}
 </body></html>`;
 }

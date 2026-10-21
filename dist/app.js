@@ -22,6 +22,24 @@
     : (storedTheme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
   applyTheme(initialTheme);
 
+  document.querySelectorAll('[data-copy-url]').forEach(button => button.addEventListener('click', async () => {
+    const url = button.dataset.copyUrl;
+    try {
+      await navigator.clipboard.writeText(url);
+      const original = button.textContent;
+      button.textContent = 'Link copiado';
+      setTimeout(() => { button.textContent = original; }, 1800);
+    } catch (_) { window.prompt('Copie o link da notícia:', url); }
+  }));
+  document.querySelectorAll('[data-native-share]').forEach(button => button.addEventListener('click', async () => {
+    const payload = { title: button.dataset.shareTitle, url: button.dataset.shareUrl };
+    if (navigator.share) {
+      try { await navigator.share(payload); } catch (_) {}
+    } else {
+      window.prompt('Copie o link da notícia:', payload.url);
+    }
+  }));
+
   const data = window.PORTAL_EDITORIAL;
   if (!data || !Array.isArray(data.stories)) return;
 
@@ -32,11 +50,11 @@
   let currentCategory = 'all';
 
   const escapeHTML = (value) => String(value ?? '').replace(/[&<>'"]/g, char => ({
-    '&': '&',
-    '<': '<',
-    '>': '>',
-    "'": '\'',
-    '"': '"'
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    "'": '&#39;',
+    '"': '&quot;'
   }[char]));
 
   const formatDate = (dateStr) => {
@@ -46,7 +64,7 @@
     return `${d} ${months[parseInt(m) - 1]} ${y}`;
   };
 
-  const storyHTML = (story, index) => `<article class="story-card" data-tone="${escapeHTML(story.tone)}" data-category="${escapeHTML(story.section)}" data-article-id="${escapeHTML(story.slug)}">
+  const storyHTML = (story, index) => `<article class="story-card" data-tone="${escapeHTML(story.tone)}" data-category="${escapeHTML(story.section)}" data-article-id="${escapeHTML(story.slug)}" data-href="/artigo/${encodeURIComponent(story.slug)}/" tabindex="0" role="link">
     <a class="story-media" data-index="0${index + 1}" href="/artigo/${encodeURIComponent(story.slug)}/" aria-label="Abrir: ${escapeHTML(story.title)}">${story.image ? `<img src="${escapeHTML(story.image)}" alt="${escapeHTML(story.imageAlt || '')}" loading="lazy" width="1200" height="630">` : ''}</a>
     <div class="story-content">
       <div class="card-top"><span class="tag">${escapeHTML(story.section)}</span></div>
@@ -119,6 +137,21 @@
   }));
 
   search.addEventListener('input', render);
+
+  function activateStoryCard(card) {
+    const href = card.dataset.href;
+    if (href) window.location.href = href;
+  }
+  grid.addEventListener('click', event => {
+    if (event.target.closest('a, button, input, summary')) return;
+    const card = event.target.closest('.story-card[data-href]');
+    if (card) activateStoryCard(card);
+  });
+  grid.addEventListener('keydown', event => {
+    if (!['Enter', ' '].includes(event.key) || event.target.closest('a, button, input, summary')) return;
+    const card = event.target.closest('.story-card[data-href]');
+    if (card) { event.preventDefault(); activateStoryCard(card); }
+  });
 
   let storedLayout = initialParams.get('layout') || 'pulse';
   if (!initialParams.get('layout')) {
