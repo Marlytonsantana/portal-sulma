@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-10-19T19:40:00-03:00",
+  "lastUpdated": "2026-10-21T14:30:00-03:00",
   "site": {
     "name": "Portal Sul MA",
     "url": "https://portalsulma.com",
@@ -17,6 +17,286 @@
     }
   },
   "posts": [
+    {
+      "id": "RADAR-MA-2026-10-21-01",
+      "slug": "quaest-flavio-lula-segundo-turno",
+      "section": "Política regional",
+      "tone": "blue",
+      "title": "Quaest aponta empate técnico entre Flávio Bolsonaro e Lula no segundo turno",
+      "excerpt": "Levantamento divulgado nesta quarta-feira mostra Flávio com 45% e Lula com 44%; margem de erro é de dois pontos percentuais.",
+      "content": "<p>A disputa pela Presidência segue sem vantagem definida dentro da margem de erro. Pesquisa Quaest divulgada nesta quarta-feira (21) aponta Flávio Bolsonaro (PL) com 45% das intenções de voto e Luiz Inácio Lula da Silva (PT) com 44%.</p><p>A diferença de um ponto percentual caracteriza empate técnico, considerando a margem de dois pontos para mais ou para menos. Os percentuais apresentados são de votos totais.</p><p>O levantamento ouviu 2.154 eleitores entre 17 e 20 de outubro e tem nível de confiança de 95%. Segundo os dados publicados sobre a pesquisa, o registro no Tribunal Superior Eleitoral é BR-08535/2026.</p><p>Para o eleitor maranhense, o resultado oferece um retrato nacional da disputa. Os números não representam, isoladamente, a preferência dos moradores de Balsas ou do sul do estado.</p><p>A pesquisa registra as respostas dadas durante o período de entrevistas; não antecipa o resultado das urnas.</p>",
+      "image": "assets/quaest-flavio-lula-segundo-turno-hero.webp",
+      "category": "Política regional",
+      "tags": [
+        "Política",
+        "Eleições 2026"
+      ],
+      "date": "2026-10-21",
+      "factDate": "2026-10-21",
+      "sourceDate": "2026-10-21",
+      "author": "Rafael Nogueira",
+      "reviewer": "Helena Duarte",
+      "checking": "PARCIALMENTE_CONFIRMADA",
+      "editorialStatus": "APROVADO_POR_TOM",
+      "recommendation": "INTEGRAR_E_VALIDAR",
+      "publicationAuthorized": true,
+      "relevance": "Relevância nacional ou estadual para o público do sul do Maranhão.",
+      "reporting": "Reescrita com base nas fontes citadas; sem apuração própria.",
+      "pending": "Confrontar levantamento original e registro diretamente no TSE antes de publicar.",
+      "caveat": "Assinaturas e revisão são personas editoriais assistidas por IA sob supervisão humana. Não representam checagem humana independente.",
+      "sources": [
+        {
+          "name": "Fonte da versão aprovada",
+          "url": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-45-contra-44-de-lula-no-2o-turno-diz-quaest/",
+          "type": "Secundária",
+          "accessed": false,
+          "note": "Versão aprovada na conversa; não marcar nova checagem como concluída."
+        }
+      ],
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Quaest aponta empate técnico entre Flávio Bolsonaro e Lula no segundo turno",
+        "description": "Levantamento divulgado nesta quarta-feira mostra Flávio com 45% e Lula com 44%; margem de erro é de dois pontos percentuais.",
+        "dateCreated": "2026-10-21",
+        "author": {
+          "@type": "Organization",
+          "name": "Portal Sul MA",
+          "url": "https://portalsulma.com/",
+          "description": "Texto na voz de Rafael Nogueira, persona editorial assistida por IA sob supervisão humana."
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Portal Sul MA",
+          "url": "https://portalsulma.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://portalsulma.com/assets/portal-sulma-logo-sanitized.svg"
+          }
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://portalsulma.com/assets/quaest-flavio-lula-segundo-turno-hero.webp",
+          "width": 1200,
+          "height": 630,
+          "caption": "Foto de arquivo do debate entre Lula e Flávio Bolsonaro."
+        }
+      },
+      "imageCaption": "Foto de arquivo do debate entre Lula e Flávio Bolsonaro.",
+      "imageAlt": "Foto de arquivo do debate entre Lula e Flávio Bolsonaro.",
+      "imageCredit": "Reprodução/Band",
+      "imageIsIllustrative": false
+    },
+    {
+      "id": "RADAR-MA-2026-10-21-02",
+      "slug": "lula-visita-sarney-sao-luis",
+      "section": "Política regional",
+      "tone": "blue",
+      "title": "Lula visita Sarney em São Luís após caminhada de campanha",
+      "excerpt": "Encontro ocorreu na residência do ex-presidente nesta terça-feira (20), poucos dias depois de sua alta hospitalar.",
+      "content": "<p>O presidente Luiz Inácio Lula da Silva (PT) visitou o ex-presidente José Sarney nesta terça-feira (20), em São Luís. A conversa aconteceu na residência de Sarney, após uma caminhada de campanha do candidato à reeleição na capital maranhense.</p><p>Segundo reportagem do Estadão Conteúdo, o encontro durou aproximadamente 20 minutos. A primeira-dama Janja também acompanhou a visita, conforme publicação do Poder360.</p><p>Sarney havia recebido alta hospitalar no sábado (17), depois de passar por uma cirurgia para tratar uma obstrução intestinal. O hospital informou, na ocasião, que ele seguiria em acompanhamento ambulatorial.</p><p>Após o encontro, Lula deixou São Luís e seguiu para a Bahia, dando continuidade à agenda eleitoral.</p><p>As informações consultadas sobre a visita não apresentam anúncio de obra, investimento ou medida específica para os municípios do sul do Maranhão.</p>",
+      "image": "assets/lula-visita-sarney-sao-luis-hero.webp",
+      "category": "Política regional",
+      "tags": [
+        "Política",
+        "Eleições 2026"
+      ],
+      "date": "2026-10-21",
+      "factDate": "2026-10-20",
+      "sourceDate": "2026-10-20",
+      "author": "Rafael Nogueira",
+      "reviewer": "Helena Duarte",
+      "checking": "PARCIALMENTE_CONFIRMADA",
+      "editorialStatus": "APROVADO_POR_TOM",
+      "recommendation": "INTEGRAR_E_VALIDAR",
+      "publicationAuthorized": true,
+      "relevance": "Relevância nacional ou estadual para o público do sul do Maranhão.",
+      "reporting": "Reescrita com base nas fontes citadas; sem apuração própria.",
+      "pending": "",
+      "caveat": "Assinaturas e revisão são personas editoriais assistidas por IA sob supervisão humana. Não representam checagem humana independente.",
+      "sources": [
+        {
+          "name": "Fonte da versão aprovada",
+          "url": "https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2026/10/20/lula-visita-jose-sarney-em-sao-luis-e-tem-conversa-breve-com-ex-presidente.htm",
+          "type": "Secundária",
+          "accessed": false,
+          "note": "Versão aprovada na conversa; não marcar nova checagem como concluída."
+        }
+      ],
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Lula visita Sarney em São Luís após caminhada de campanha",
+        "description": "Encontro ocorreu na residência do ex-presidente nesta terça-feira (20), poucos dias depois de sua alta hospitalar.",
+        "dateCreated": "2026-10-21",
+        "author": {
+          "@type": "Organization",
+          "name": "Portal Sul MA",
+          "url": "https://portalsulma.com/",
+          "description": "Texto na voz de Rafael Nogueira, persona editorial assistida por IA sob supervisão humana."
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Portal Sul MA",
+          "url": "https://portalsulma.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://portalsulma.com/assets/portal-sulma-logo-sanitized.svg"
+          }
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://portalsulma.com/assets/lula-visita-sarney-sao-luis-hero.webp",
+          "width": 1200,
+          "height": 630,
+          "caption": "Lula e José Sarney durante encontro em São Luís."
+        }
+      },
+      "imageCaption": "Lula e José Sarney durante encontro em São Luís.",
+      "imageAlt": "Lula e José Sarney durante encontro em São Luís.",
+      "imageCredit": "Ysabelle Ribeiro/Grupo Mirante",
+      "imageIsIllustrative": false
+    },
+    {
+      "id": "RADAR-MA-2026-10-21-03",
+      "slug": "nikolas-sao-luis-agenda-flavio",
+      "section": "Política regional",
+      "tone": "blue",
+      "title": "Nikolas tem ato previsto em São Luís; Flávio cumpre agenda em São Paulo e Fortaleza",
+      "excerpt": "Mobilização na capital maranhense integra a campanha do candidato do PL à Presidência.",
+      "content": "<p>O deputado federal Nikolas Ferreira (PL-MG) tem participação prevista nesta quarta-feira (21) no “Bloquinho do 22”, em São Luís. O ato reúne apoiadores da candidatura de Flávio Bolsonaro (PL) à Presidência da República.</p><p>Segundo O Imparcial, a mobilização será liderada por Nikolas após mudanças na programação de Flávio, cuja presença havia sido anunciada anteriormente na capital maranhense.</p><p>A agenda publicada nesta manhã pela Agência Brasil informa compromissos de Flávio em São Paulo e um ato em Fortaleza, no Ceará, previsto para as 19h, na Avenida do Contorno.</p><p>Em São Luís, a mobilização está anunciada para a Praça Maria Aragão, no Centro Histórico. A participação de Nikolas integra as atividades de aliados para ampliar o apoio ao candidato no Nordeste.</p><p>Até a checagem utilizada nesta versão, as fontes descreviam a programação prevista. A realização do ato e a presença dos participantes precisam ser confirmadas na cobertura do evento.</p>",
+      "image": "assets/nikolas-sao-luis-agenda-flavio-hero.webp",
+      "category": "Política regional",
+      "tags": [
+        "Política",
+        "Eleições 2026"
+      ],
+      "date": "2026-10-21",
+      "factDate": "2026-10-21",
+      "sourceDate": "2026-10-21",
+      "author": "Rafael Nogueira",
+      "reviewer": "Helena Duarte",
+      "checking": "PARCIALMENTE_CONFIRMADA",
+      "editorialStatus": "APROVADO_POR_TOM",
+      "recommendation": "INTEGRAR_E_VALIDAR",
+      "publicationAuthorized": true,
+      "relevance": "Relevância nacional ou estadual para o público do sul do Maranhão.",
+      "reporting": "Reescrita com base nas fontes citadas; sem apuração própria.",
+      "pending": "Preservar evento como previsto; conferir fotógrafo original da imagem de arquivo.",
+      "caveat": "Assinaturas e revisão são personas editoriais assistidas por IA sob supervisão humana. Não representam checagem humana independente.",
+      "sources": [
+        {
+          "name": "Fonte da versão aprovada",
+          "url": "https://oimparcial.com.br/sao-luis/politica/2026/10/nikolas-ferreira-lidera-bloquinho-do-22-em-sao-luis-em-meio-a-reajustes-na-agenda-de-flavio-bolsonaro/",
+          "type": "Secundária",
+          "accessed": false,
+          "note": "Versão aprovada na conversa; não marcar nova checagem como concluída."
+        }
+      ],
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Nikolas tem ato previsto em São Luís; Flávio cumpre agenda em São Paulo e Fortaleza",
+        "description": "Mobilização na capital maranhense integra a campanha do candidato do PL à Presidência.",
+        "dateCreated": "2026-10-21",
+        "author": {
+          "@type": "Organization",
+          "name": "Portal Sul MA",
+          "url": "https://portalsulma.com/",
+          "description": "Texto na voz de Rafael Nogueira, persona editorial assistida por IA sob supervisão humana."
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Portal Sul MA",
+          "url": "https://portalsulma.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://portalsulma.com/assets/portal-sulma-logo-sanitized.svg"
+          }
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://portalsulma.com/assets/nikolas-sao-luis-agenda-flavio-hero.webp",
+          "width": 1200,
+          "height": 630,
+          "caption": "Nikolas Ferreira e Flávio Bolsonaro em ato na Paulista. Foto de arquivo; não retrata a agenda de hoje no Maranhão."
+        }
+      },
+      "imageCaption": "Nikolas Ferreira e Flávio Bolsonaro em ato na Paulista. Foto de arquivo; não retrata a agenda de hoje no Maranhão.",
+      "imageAlt": "Nikolas Ferreira e Flávio Bolsonaro em ato na Paulista. Foto de arquivo; não retrata a agenda de hoje no Maranhão.",
+      "imageCredit": "Reprodução/UOL — origem informada pelo usuário",
+      "imageIsIllustrative": false
+    },
+    {
+      "id": "RADAR-MA-2026-10-21-04",
+      "slug": "lais-costa-recuperacao-balsas",
+      "section": "Sociedade",
+      "tone": "red",
+      "title": "Boletim divulgado na segunda-feira aponta sinais positivos na recuperação de Laís Costa",
+      "excerpt": "Vítima de ataque a tiros em Balsas passou por cirurgia; informações foram publicadas pelo Imirante na terça-feira (20).",
+      "content": "<p>Laís Costa, de 27 anos, apresentou sinais positivos de recuperação após passar por uma cirurgia em Balsas. A informação consta de reportagem publicada pelo Imirante na terça-feira (20), com base em boletim médico divulgado na segunda-feira (19).</p><p>A jovem foi baleada no sábado (17), no bairro Nova Trizidela. O ex-companheiro é apontado como suspeito do ataque, tratado na cobertura como tentativa de feminicídio.</p><p>Segundo a reportagem, Laís passou por cirurgia no Hospital Regional de Balsas no domingo (18). O boletim citado descrevia quadro clínico estável e resultado da tomografia de controle dentro do esperado pela equipe responsável.</p><p>Naquele momento, ela permanecia sedada, intubada e em coma induzido. A estabilidade descrita no boletim não significava alta hospitalar.</p><p>A publicação de terça-feira também informava que o suspeito estava foragido. Esses dados correspondem à atualização daquela data e não confirmam o quadro de saúde ou a situação da investigação nesta quarta-feira (21).</p>",
+      "image": "assets/lais-costa-recuperacao-balsas-hero.webp",
+      "category": "Sociedade",
+      "tags": [
+        "Balsas",
+        "Segurança"
+      ],
+      "date": "2026-10-21",
+      "factDate": "2026-10-19",
+      "sourceDate": "2026-10-20",
+      "author": "Clara Reis",
+      "reviewer": "Helena Duarte",
+      "checking": "PARCIALMENTE_CONFIRMADA",
+      "editorialStatus": "APROVADO_POR_TOM",
+      "recommendation": "INTEGRAR_E_VALIDAR",
+      "publicationAuthorized": true,
+      "relevance": "Acontecimento em Balsas.",
+      "reporting": "Reescrita com base nas fontes citadas; sem apuração própria.",
+      "pending": "Atualizar quadro médico ou situação policial antes da publicação; mudança editorial relevante retorna ao Tom.",
+      "caveat": "Assinaturas e revisão são personas editoriais assistidas por IA sob supervisão humana. Não representam checagem humana independente.",
+      "sources": [
+        {
+          "name": "Fonte da versão aprovada",
+          "url": "https://imirante.com/noticias/balsas/2026/10/20/baleada-ex-companheiro-lais-costa-apresenta-sinais-positivos-recuperacao",
+          "type": "Secundária",
+          "accessed": false,
+          "note": "Versão aprovada na conversa; não marcar nova checagem como concluída."
+        }
+      ],
+      "structuredData": {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Boletim divulgado na segunda-feira aponta sinais positivos na recuperação de Laís Costa",
+        "description": "Vítima de ataque a tiros em Balsas passou por cirurgia; informações foram publicadas pelo Imirante na terça-feira (20).",
+        "dateCreated": "2026-10-21",
+        "author": {
+          "@type": "Organization",
+          "name": "Portal Sul MA",
+          "url": "https://portalsulma.com/",
+          "description": "Texto na voz de Clara Reis, persona editorial assistida por IA sob supervisão humana."
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Portal Sul MA",
+          "url": "https://portalsulma.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://portalsulma.com/assets/portal-sulma-logo-sanitized.svg"
+          }
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://portalsulma.com/assets/lais-costa-recuperacao-balsas-hero.webp",
+          "width": 1200,
+          "height": 630,
+          "caption": "Imagem ilustrativa — Acervo editorial do Portal Sul MA. Não retrata a vítima nem documenta o caso."
+        }
+      },
+      "imageCaption": "Imagem ilustrativa — Acervo editorial do Portal Sul MA. Não retrata a vítima nem documenta o caso.",
+      "imageAlt": "Imagem ilustrativa — Acervo editorial do Portal Sul MA. Não retrata a vítima nem documenta o caso.",
+      "imageCredit": "Acervo editorial do Portal Sul MA",
+      "imageIsIllustrative": true
+    },
     {
       "id": "RADAR-MA-2026-10-19-01",
       "slug": "chuvas-isoladas-maranhao-19-26-outubro",
