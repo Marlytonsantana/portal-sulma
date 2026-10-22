@@ -162,9 +162,9 @@ function articleTemplate(post) {
 <script src="/app.js" defer></script><script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/web-vitals@latest/dist/web-vitals.attribution.iife.js" defer></script>
 </head><body data-layout="pulse"><a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 ${headerMarkup('/')}
-<main id="conteudo"><article id="topo"><header class="article-hero shell" aria-labelledby="article-title"><p class="eyebrow">${escapeHtml(post.section)}</p><h1 id="article-title">${escapeHtml(post.title)}</h1><div class="article-meta"><span>${escapeHtml(post.author)}</span><span>${formatDate(post.date)}</span></div></header>
+<main id="conteudo"><article id="topo"><header class="article-hero shell" aria-labelledby="article-title"><p class="eyebrow">${escapeHtml(post.section)}</p><h1 id="article-title">${escapeHtml(post.title)}</h1><div class="article-meta"><span>${escapeHtml(post.author)}</span><span>${formatDate(post.date)}</span></div>${shareMarkup}</header>
 ${imageMarkup}
-<section class="article-section shell" aria-label="Texto da notícia"><div class="article-body">${post.content}</div>${shareMarkup}${disclosure}<div class="article-closing"><span>${escapeHtml(post.author)}</span><span>${formatDate(post.date)}</span></div></section></article></main>
+<section class="article-section shell" aria-label="Texto da notícia"><div class="article-body">${post.content}</div>${disclosure}<div class="article-closing"><span>${escapeHtml(post.author)}</span><span>${formatDate(post.date)}</span></div></section></article></main>
 ${footerMarkup('/')}
 </body></html>`;
 }
